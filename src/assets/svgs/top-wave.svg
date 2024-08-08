@@ -1,0 +1,19 @@
+<svg className="hero__top-wave" width="300" viewBox="0 0 453 426" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M-0.000244141 0V394.5C106 459.667 354 448 434.5 91.4999C441.621 59.9623 447.655 29.3828 452.554 0H259.301C245.466 0.449219 230.396 0.460052 214.008 0H-0.000244141Z" fill="url(#paint0_linear_2_53)" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M-0.000244141 0V394.5C106 459.667 354 448 434.5 91.4999C441.621 59.9623 447.655 29.3828 452.554 0H259.301C245.466 0.449219 230.396 0.460052 214.008 0H-0.000244141Z" fill="url(#paint1_linear_2_53)" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M-0.000244141 0V394.5C106 459.667 354 448 434.5 91.4999C441.621 59.9623 447.655 29.3828 452.554 0H259.301C245.466 0.449219 230.396 0.460052 214.008 0H-0.000244141Z" fill="url(#paint2_linear_2_53)" />
+  <defs>
+    <linearGradient id="paint0_linear_2_53" x1="-181" y1="12.808" x2="1285.5" y2="12.808" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" />
+      <stop offset="1" stop-color="#00ACCC" />
+    </linearGradient>
+    <linearGradient id="paint1_linear_2_53" x1="-181" y1="12.808" x2="1285.5" y2="12.808" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" />
+      <stop offset="1" stop-color="#00ACCC" />
+    </linearGradient>
+    <linearGradient id="paint2_linear_2_53" x1="-181" y1="12.808" x2="1285.5" y2="12.808" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06B6D4" />
+      <stop offset="1" stop-color="#FCE4C9" />
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,24 @@
+<svg width="50%" className="hero__bottom-wave" viewBox="0 0 1512 663" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M71.4969 663C5.9967 561.611 -49.6783 417.044 71.4968 277.5C172.604 186 260.186 168.038 345.497 175C430.808 181.962 507.085 261.866 607.497 251C707.908 240.134 832.454 138.498 946.497 119C1060.54 99.5024 1164.08 162.144 1256.5 156C1348.91 149.856 1430.2 74.9282 1511.5 0V663H71.4969Z" fill="url(#paint0_linear_1_47)" />
+  <defs>
+    <linearGradient id="paint0_linear_1_47" x1="0" y1="331.5" x2="1511.5" y2="331.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0567FB" />
+      <stop offset="0.0625" stop-color="#1264FB" />
+      <stop offset="0.125" stop-color="#1E62FB" />
+      <stop offset="0.1875" stop-color="#2B5FFB" />
+      <stop offset="0.25" stop-color="#385CFB" />
+      <stop offset="0.3125" stop-color="#4459FB" />
+      <stop offset="0.375" stop-color="#5157FB" />
+      <stop offset="0.4375" stop-color="#5E54FB" />
+      <stop offset="0.5" stop-color="#6B51FB" />
+      <stop offset="0.5625" stop-color="#774EFB" />
+      <stop offset="0.625" stop-color="#844CFB" />
+      <stop offset="0.6875" stop-color="#9149FB" />
+      <stop offset="0.75" stop-color="#9D46FB" />
+      <stop offset="0.8125" stop-color="#AA43FB" />
+      <stop offset="0.875" stop-color="#B741FB" />
+      <stop offset="0.9375" stop-color="#C33EFB" />
+      <stop offset="1" stop-color="#D03BFB" />
+    </linearGradient>
+  </defs>
+</svg>
