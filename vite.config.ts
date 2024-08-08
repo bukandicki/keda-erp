@@ -7,6 +7,9 @@ export default defineConfig({
   plugins: [
     react(),
     svgr({
+      svgrOptions: {
+        memo: true,
+      },
       include: "**/*.svg",
     }),
   ],
