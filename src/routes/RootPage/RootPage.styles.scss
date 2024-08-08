@@ -1,6 +1,8 @@
-section {
-  height: 100vh;
-  width: 100%;
+.erp {
+  section {
+    min-height: 100vh;
+    width: 100%;
+  }
 }
 
 .erp__hero {
@@ -35,3 +37,132 @@ section {
   margin: 50px 0 0 50px;
 }
 
+// ABOUT SECTION
+
+.erp__about,
+.erp__pricing {
+  padding: 80px;
+  position: relative;
+}
+
+.about__headline {
+  h2 {
+    font-size: 36px;
+    mix-blend-mode: difference;
+    color: white;
+    user-select: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -200px;
+    top: 50px;
+    z-index: -1;
+    display: block;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #1264fb;
+  }
+}
+
+.about__services {
+  margin-top: 120px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.service__box {
+  padding: 33px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+  h3 {
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  a {
+    color: #1264fb;
+  }
+}
+
+// PRICING SECTION
+
+.pricing__title,
+.pricing__sub-title {
+  text-align: center;
+}
+
+.pricing__title {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.tier__lists {
+  display: flex;
+  gap: 30px;
+
+  hr {
+    border: 0;
+    border-top: 1px solid;
+    margin: 20px 0;
+    border-color: #e4e5e6;
+  }
+}
+
+.tier__box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+  border: solid 1px #e4e5e6;
+}
+
+.tier__label {
+  background-color: #1264fb;
+  padding: 4px 14px;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 30px;
+}
+
+.tier__name {
+  margin: 20px 0 0;
+  font-weight: 500;
+}
+
+.tier__description {
+  color: #888e92;
+  font-size: 12px;
+}
+
+.tier__price {
+  font-size: 40px;
+  margin: 0;
+}
+
+.tier__benefits {
+  padding: 0;
+  list-style: none;
+
+  li:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  li svg {
+    vertical-align: bottom;
+    margin-right: 8px;
+  }
+}
+
+.tier__cta {
+  margin-top: auto;
+}
