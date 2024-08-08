@@ -10,7 +10,10 @@ import "./index.styles.scss"
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ReactLenis root>
+    <ReactLenis root options={{
+      easing: x => x < 0.5 ? 16 * x * x * x * x * x : 1 - Math.pow(-2 * x + 2, 5) / 2,
+      lerp: .085
+    }}>
       <RouterProvider />
     </ReactLenis>
   </StrictMode>,
