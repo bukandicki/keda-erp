@@ -29,7 +29,7 @@ function HeaderComponent() {
         <nav className="header__nav">
           <ul className="nav__lists">
             {MENUS.map(menu => (
-              <li>
+              <li key={menu.to}>
                 <NavLink
                   to={menu.hash ? menu.to + menu.hash : menu.to}
                   onClick={() => lenis?.scrollTo(menu.hash)}
