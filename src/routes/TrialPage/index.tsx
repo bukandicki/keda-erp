@@ -10,6 +10,9 @@ const Button = lazy(() => import("../../components/Button"));
 const AnalyticSection = lazy(() => import("./AnalyticSection.component"));
 const ItemsSection = lazy(() => import("./ItemsSection.component"));
 
+import ChartIcon from "../../assets/svgs/chart.svg"
+import BoxIcon from "../../assets/svgs/box.svg"
+
 import "./Trial.styles.scss"
 
 export default function TrialPage() {
@@ -60,11 +63,17 @@ export default function TrialPage() {
         <ul className="sidebar__nenu">
           {currentTier?.slug !== "basic" && (
             <li>
-              <button onClick={() => setSelectedMenu("analytic")}>Analytics</button>
+              <button onClick={() => setSelectedMenu("analytic")}>
+                <ChartIcon />
+                <span>Analytics</span>
+              </button>
             </li>
           )}
           <li>
-            <button onClick={() => setSelectedMenu("items")}>Items</button>
+            <button onClick={() => setSelectedMenu("items")}>
+              <BoxIcon />
+              <span>Items</span>
+            </button>
           </li>
         </ul>
       </aside>

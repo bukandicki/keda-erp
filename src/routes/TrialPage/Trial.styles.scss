@@ -23,6 +23,14 @@
   border-right: solid toRem(1px) clr(smoke);
   height: 100vh;
   width: 20%;
+
+  h3 {
+    display: none;
+
+    @include screen(sm) {
+      display: block;
+    }
+  }
 }
 
 .sidebar__nenu {
@@ -31,10 +39,23 @@
 
   button {
     font-size: toRem(16px);
+    display: flex;
+  }
+
+  button span {
+    display: none;
+
+    @include screen(sm) {
+      display: inline;
+    }
   }
 
   li {
-    margin-bottom: toRem(14px);
+    margin-bottom: toRem(20px);
+
+    @include screen(sm) {
+      margin-bottom: toRem(14px);
+    }
   }
 }
 
@@ -125,13 +146,17 @@
 
 .inventory__table {
   border-collapse: collapse;
-  width: toRem(800px);
+  width: 100%;
 
   th,
   td {
     padding: toRem(8px);
     text-align: left;
     border-bottom: toRem(1px) solid #ddd;
+  }
+
+  @include screen(sm) {
+    width: toRem(800px);
   }
 }
 
@@ -143,6 +168,7 @@
 
 .inventory__form-group {
   width: 100%;
+
   .input {
     flex: 1;
   }
