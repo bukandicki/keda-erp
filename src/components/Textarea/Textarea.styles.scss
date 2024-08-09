@@ -1,0 +1,20 @@
+.textarea {
+  width: 100%;
+}
+
+.textarea__label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.textarea__field {
+  width: 100%;
+  font-size: 16px;
+  border-radius: 8px;
+  height: 44px;
+  padding: 8px 16px;
+  resize: vertical;
+  border: solid 1px #e4e5e6;
+  outline: none;
+}
