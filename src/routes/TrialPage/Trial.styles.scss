@@ -1,0 +1,123 @@
+@import "../../styles/functions.scss";
+
+.trial {
+  display: flex;
+  min-height: 100vh;
+}
+
+.trial__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trial__sidebar {
+  padding: 64px 30px 0 30px;
+  border-right: solid 1px clr(smoke);
+  height: 100vh;
+  width: 20%;
+}
+
+.sidebar__nenu {
+  list-style: none;
+  padding: 0;
+
+  button {
+    font-size: 16px;
+  }
+
+  li {
+    margin-bottom: 14px;
+  }
+}
+
+.trial__main {
+  padding: 64px 80px 0 80px;
+  width: 80%;
+}
+
+.profit__prediction {
+  color: clr(primary);
+}
+
+.analytic__summary {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.analytic__box {
+  flex: 1;
+  border: solid 1px clr(smoke);
+  padding: 12px;
+  border-radius: 16px;
+  display: flex;
+  gap: 24px;
+}
+
+.analytic__icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: clr(primary);
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.analytic__detail {
+  align-self: center;
+}
+
+.analytic__name {
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.analytic__counter {
+  font-size: 14px;
+}
+
+.analytic__charts {
+  margin-top: 100px;
+  display: flex;
+  gap: 30px;
+}
+
+.chart__box {
+  flex: 1;
+}
+
+.inventory__table {
+  border-collapse: collapse;
+  width: 800px;
+
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.inventory__form, .inventory__form-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.inventory__form-group {
+  width: 100%;
+  .input {
+    flex: 1;
+  }
+}
