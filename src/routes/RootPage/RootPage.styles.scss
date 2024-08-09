@@ -1,13 +1,14 @@
 @import "../../styles/functions.scss";
+@import "../../styles/mixins.scss";
 
 .erp {
   section {
-    min-height: 100vh;
     width: 100%;
   }
 }
 
 .erp__hero {
+  height: 100vh;
   position: relative;
 }
 
@@ -24,70 +25,136 @@
 }
 
 .hero__description {
-  max-width: 700px;
+  width: 100%;
+  padding: 0 24px;
+  font-size: toRem(16px);
   text-align: center;
-  top: 200px;
-  right: 120px;
+  right: 50%;
+  transform: translateX(50%);
+
+  @include screen(md) {
+    font-size: toRem(24px);
+  }
+
+  @include screen(lg) {
+    padding: 0;
+    top: toRem(200px);
+    right: toRem(110px);
+    max-width: toRem(700px);
+    transform: unset;
+  }
 }
 
 .hero__information {
-  top: 400px;
-  left: 80px;
+  top: toRem(450px);
+  width: 100%;
+  padding: 0 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include screen(lg) {
+    padding: 0;
+    top: toRem(400px);
+    width: fit-content;
+    transform: unset;
+    left: toRem(80px);
+  }
+}
+
+.hero__headline {
+  width: 100%;
+  font-size: toRem(16px);
+  text-align: center;
+
+  @include screen(lg) {
+    max-width: 330px;
+  }
 }
 
 .hero__illustration {
-  margin: 50px 0 0 50px;
+  display: block;
+  margin: 40px auto;
+
+  @include screen(lg) {
+    display: unset;
+    margin: toRem(50px) 0 0 toRem(50px);
+  }
 }
 
 // ABOUT SECTION
 
 .erp__about,
 .erp__pricing {
-  padding: 80px;
+  padding: toRem(24px);
   position: relative;
+
+  @include screen(md) {
+    padding: toRem(60px);
+  }
+
+  @include screen(lg) {
+    padding: toRem(80px);
+  }
 }
 
 .about__headline {
   h2 {
-    font-size: 36px;
     mix-blend-mode: difference;
     color: white;
     user-select: none;
+
+    @include screen(lg) {
+      font-size: toRem(36px);
+    }
   }
 
   &::before {
     content: "";
     position: absolute;
-    left: -200px;
-    top: 50px;
+    left: toRem(-100px);
+    top: toRem(-10px);
     z-index: -1;
     display: block;
-    width: 400px;
-    height: 400px;
+    width: toRem(200px);
+    height: toRem(200px);
     border-radius: 50%;
     background-color: clr(primary);
+
+    @include screen(lg) {
+      top: toRem(50px);
+      width: toRem(400px);
+      height: toRem(400px);
+      left: toRem(-200px);
+    }
   }
 }
 
 .about__services {
-  margin-top: 120px;
+  margin-top: toRem(32px);
   display: grid;
-  gap: 30px;
-  grid-template-columns: 1fr 1fr;
+  gap: toRem(30px);
+
+  @include screen(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include screen(lg) {
+    margin-top: toRem(120px);
+  }
 }
 
 .service__box {
-  padding: 33px;
-  border-radius: 8px;
+  padding: toRem(33px);
+  border-radius: toRem(8px);
   background-color: clr(light);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.1) toRem(0px) toRem(10px) toRem(15px) toRem(-3px), rgba(0, 0, 0, 0.05) toRem(0px) toRem(4px) toRem(6px) toRem(-2px);
 
   h3 {
     font-weight: 500;
   }
 
   p {
-    font-size: 14px;
+    font-size: toRem(14px);
   }
 
   a {
@@ -103,19 +170,24 @@
 }
 
 .pricing__title {
-  font-size: 32px;
+  font-size: toRem(32px);
   margin-bottom: 0;
 }
 
 .tier__lists {
   display: flex;
-  gap: 30px;
+  gap: toRem(30px);
+  flex-direction: column;
 
   hr {
     border: 0;
-    border-top: 1px solid;
-    margin: 20px 0;
+    border-top: toRem(1px) solid;
+    margin: toRem(20px) 0;
     border-color: clr(smoke);
+  }
+
+  @include screen(lg) {
+    flex-direction: row;
   }
 }
 
@@ -123,31 +195,31 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  border-radius: 8px;
-  border: solid 1px clr(smoke);
+  padding: toRem(20px);
+  border-radius: toRem(8px);
+  border: solid toRem(1px) clr(smoke);
 }
 
 .tier__label {
   background-color: clr(primary);
-  padding: 4px 14px;
+  padding: toRem(4px) toRem(14px);
   color: clr(light);
   font-weight: 500;
-  border-radius: 30px;
+  border-radius: toRem(30px);
 }
 
 .tier__name {
-  margin: 20px 0 0;
+  margin: toRem(20px) 0 0;
   font-weight: 500;
 }
 
 .tier__description {
   color: clr(darkSmoke);
-  font-size: 12px;
+  font-size: toRem(12px);
 }
 
 .tier__price {
-  font-size: 40px;
+  font-size: toRem(40px);
   margin: 0;
 }
 
@@ -156,12 +228,12 @@
   list-style: none;
 
   li:not(:last-child) {
-    margin-bottom: 14px;
+    margin-bottom: toRem(14px);
   }
 
   li svg {
     vertical-align: bottom;
-    margin-right: 8px;
+    margin-right: toRem(8px);
   }
 }
 
@@ -172,33 +244,60 @@
 // CONTACT SECTION
 
 .erp__contact {
-  padding: 100px 144px;
+  padding: toRem(24px);
+
+  @include screen(md) {
+    padding: toRem(60px);
+  }
+
+  @include screen(lg) {
+    padding: toRem(100px) toRem(144px);
+  }
 }
 
 .contact__wrapper {
   width: 100%;
   display: flex;
+  gap: 30px;
   justify-content: space-between;
+  flex-direction: column;
+
+  @include screen(lg) {
+    flex-direction: row;
+  }
 }
 
 .contact__image {
-  width: 400px;
+  width: 100%;
+
+  @include screen(lg) {
+    width: toRem(400px);
+  }
 }
 
 .contact__address {
-  font-size: 14px;
+  font-size: toRem(14px);
   font-weight: 500;
   color: clr(darkSmoke);
 }
 
 .contact__form {
-  width: 600px;
+  width: 100%;
+
+  @include screen(lg) {
+    width: toRem(600px);
+  }
 }
 
 .contact__field-group {
   display: flex;
-  margin-bottom: 30px;
-  gap: 30px;
+  margin-bottom: toRem(30px);
+  gap: toRem(30px);
   width: 100%;
+  flex-direction: column;
+
+  @include screen(lg) {
+    flex-direction: row;
+  }
 }
 

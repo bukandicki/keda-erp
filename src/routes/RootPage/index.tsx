@@ -29,7 +29,7 @@ export default function RootPage() {
         <div className="hero__information">
           <h2 className="hero__headline">
             <em>
-              "Transform Your Business Operations<br />with Our All-in-One ERP Solution"
+              "Transform Your Business Operations with Our All-in-One ERP Solution"
             </em>
           </h2>
 

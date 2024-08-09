@@ -1,4 +1,5 @@
 @use "sass:map";
+@import "./variables.scss";
 
 @mixin screen($size, $max: false) {
   @if ($max) {
