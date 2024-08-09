@@ -1,7 +1,8 @@
-import { useState } from "react";
-import Button from "../../components/Button";
-import Input from "../../components/Input";
+import { lazy, useState } from "react";
 import { IItemsSection, ItemType } from "./Trial.types";
+
+const Button = lazy(() => import("../../components/Button"))
+const Input = lazy(() => import("../../components/Input"))
 
 export default function ItemsSection({ soldList, items, onChange, onSold }: IItemsSection) {
   const [item, setItem] = useState<ItemType>({

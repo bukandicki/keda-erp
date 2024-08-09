@@ -1,10 +1,11 @@
 import { TIER_TYPE } from "../../lib/constants/tier";
-
-import Chart from "react-apexcharts";
+import { lazy } from "react";
 
 import UsersIcon from "../../assets/svgs/users.svg"
 import DollarIcon from "../../assets/svgs/dollar.svg"
 import DoorIcon from "../../assets/svgs/door.svg"
+
+const Chart = lazy(() => import("react-apexcharts"));
 
 export default function AnalyticSection({ tier }: { tier: TIER_TYPE }) {
   const options = {

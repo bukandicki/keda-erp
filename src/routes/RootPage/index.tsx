@@ -1,17 +1,19 @@
 import { Link, useNavigate } from "react-router-dom"
 import { SERVICES_LIST } from "../../lib/constants/service"
 import { TIER_LISTS } from "../../lib/constants/tier"
+import { lazy } from "react"
 
 import TopWave from "../../assets/svgs/top-wave.svg"
 import BottomWave from "../../assets/svgs/bottom-wave.svg"
 import CheckIcon from "../../assets/svgs/check.svg"
 import ContactImage from "../../assets/images/contact.jpg"
 import AnalyticsIllustration from "../../assets/svgs/analytics.svg"
-import Button from "../../components/Button"
-import Input from "../../components/Input"
+
+const Button = lazy(() => import("../../components/Button"))
+const Input = lazy(() => import("../../components/Input"))
+const Textarea = lazy(() => import("../../components/Textarea"))
 
 import "./RootPage.styles.scss"
-import Textarea from "../../components/Textarea"
 
 export default function RootPage() {
   const navigate = useNavigate();

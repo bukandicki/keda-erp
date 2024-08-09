@@ -1,12 +1,14 @@
-import Button from "../../components/Button"
-import Input from "../../components/Input"
+import { Link } from "react-router-dom"
+import { lazy } from 'react';
 
 import GoogleLogo from "../../assets/svgs/google.svg"
 import AppleLogo from "../../assets/svgs/apple.svg"
 import TwitterLogo from "../../assets/svgs/twitter.svg"
 
+const Button = lazy(() => import("../../components/Button"))
+const Input = lazy(() => import("../../components/Input"))
+
 import "./LoginPage.styles.scss"
-import { Link } from "react-router-dom"
 
 export default function LoginPage() {
   return (

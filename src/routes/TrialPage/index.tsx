@@ -1,13 +1,14 @@
 import { mkConfig, generateCsv, download } from "export-to-csv";
 
+import { lazy, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom"
 import { TIER_LISTS, TIER_TYPE } from "../../lib/constants/tier"
 import { ItemType } from "./Trial.types";
-import { useEffect, useState } from "react";
 
-import Button from "../../components/Button";
-import AnalyticSection from "./AnalyticSection.component";
-import ItemsSection from "./ItemsSection.component";
+const Button = lazy(() => import("../../components/Button"));
+
+const AnalyticSection = lazy(() => import("./AnalyticSection.component"));
+const ItemsSection = lazy(() => import("./ItemsSection.component"));
 
 import "./Trial.styles.scss"
 
