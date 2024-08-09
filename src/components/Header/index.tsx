@@ -1,12 +1,14 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { useLenis } from "lenis/react";
-import { memo, useRef } from "react";
+import { lazy, memo, useRef } from "react";
 import { MENUS } from "../../lib/constants/menu";
 
 import gsap from "gsap";
 
 import HamburgerIcon from "../../assets/svgs/hamburger.svg"
 import CloseIcon from "../../assets/svgs/close.svg"
+
+const AnimatedText = lazy(() => import("../../components/AnimatedText"))
 
 import "./Header.styles.scss"
 
@@ -42,7 +44,11 @@ function HeaderComponent() {
                 : "header__logo-link"
             }}
           >
-            <span>HOME</span>
+            <span>
+              <AnimatedText
+                value="HOME"
+              />
+            </span>
           </NavLink>
         </div>
 
@@ -71,7 +77,9 @@ function HeaderComponent() {
                       : "nav__item"
                   }}
                 >
-                  {menu.title}
+                  <AnimatedText
+                    value={menu.title}
+                  />
                 </NavLink>
               </li>
             ))}
@@ -85,7 +93,9 @@ function HeaderComponent() {
                     : "nav__item-login"
                 }}
                 >
-                  LOGIN
+                <AnimatedText
+                  value="LOGIN"
+                />
                 </NavLink>
             </li>
           </ul>

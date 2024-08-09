@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.animated-text {
+  >span {
+    display: inline-flex;
+    overflow: hidden;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  @include screen(md) {
+    >span span {
+      transform: translateY(200%);
+    }
+  }
+}

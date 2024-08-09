@@ -12,6 +12,7 @@ import AnalyticsIllustration from "../../assets/svgs/analytics.svg"
 const Button = lazy(() => import("../../components/Button"))
 const Input = lazy(() => import("../../components/Input"))
 const Textarea = lazy(() => import("../../components/Textarea"))
+const AnimatedText = lazy(() => import("../../components/AnimatedText"))
 
 import "./RootPage.styles.scss"
 
@@ -24,12 +25,18 @@ export default function RootPage() {
         <TopWave />
         <BottomWave />
 
-        <h1 className="hero__description">Our ERP solution is designed to revolutionize the way your business operates. By integrating all your key processes into a single, user-friendly platform.</h1>
+        <h1 className="hero__description">
+          <AnimatedText
+            value="Our ERP solution is designed to revolutionize the way your business operates. By integrating all your key processes into a single, user-friendly platform."
+          />
+        </h1>
 
         <div className="hero__information">
           <h2 className="hero__headline">
             <em>
-              "Transform Your Business Operations with Our All-in-One ERP Solution"
+              <AnimatedText
+                value="Transform Your Business Operations with Our All-in-One ERP Solution"
+              />
             </em>
           </h2>
 
@@ -40,14 +47,26 @@ export default function RootPage() {
 
       <section className="erp__about" id="about">
         <div className="about__headline">
-          <h2>We provide innovative ERP solutions that streamline your business operations, boost efficiency, and drive growth. Our tailored approach ensures your unique needs are met, empowering you to achieve more.</h2>
+          <h2>
+            <AnimatedText
+              value="We provide innovative ERP solutions that streamline your business operations, boost efficiency, and drive growth. Our tailored approach ensures your unique needs are met, empowering you to achieve more."
+            />
+          </h2>
         </div>
 
         <div className="about__services">
           {SERVICES_LIST.map(service => (
             <div key={service.title} className="service__box">
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+              <h3>
+                <AnimatedText
+                  value={service.title}
+                />
+              </h3>
+              <p>
+                <AnimatedText
+                  value={service.description}
+                />
+              </p>
               <Link to="/">{service.ctaLabel} </Link>
             </div>
           ))}
@@ -55,19 +74,44 @@ export default function RootPage() {
       </section>
 
       <section className="erp__pricing" id="pricing">
-        <h2 className="pricing__title">Choose your right plan!</h2>
+        <h2 className="pricing__title">
+          <AnimatedText
+            value="Choose your right plan!"
+          />
+        </h2>
         <p className="pricing__sub-title">
-          Select from best plans, ensuring a perfect match. Need or less?<br />
-          Customize your tier for a seamless fit!
+          <AnimatedText
+            value="Select from best plans, ensuring a perfect match. Need or less?"
+          />
+          <br/>
+          <AnimatedText
+            value="Customize your tier for a seamless fit!"
+          />
         </p>
 
         <div className="tier__lists">
           {TIER_LISTS.map(tier => (
             <div key={tier.name} className="tier__box">
-              {tier.popular && <span className="tier__label">Most popular plan</span>}
-              <h3 className="tier__name">{tier.name}</h3>
-              <p className="tier__description">{tier.description}</p>
-              <h4 className="tier__price">${tier.price}</h4>
+              {tier.popular && <span className="tier__label">
+                <AnimatedText
+                  value="Most popular plan"
+                />
+              </span>}
+              <h3 className="tier__name">
+                <AnimatedText
+                  value={tier.name}
+                />
+              </h3>
+              <p className="tier__description">
+                <AnimatedText
+                  value={tier.description}
+                />
+              </p>
+              <h4 className="tier__price">
+                <AnimatedText
+                  value={`$${tier.price}`}
+                />
+              </h4>
 
               <hr />
 
@@ -137,9 +181,17 @@ export default function RootPage() {
           <div className="contact__detail">
             <img src={ContactImage} className="contact__image" />
             <p className="contact__address">
-              Komplek Green Ville, Jalan Ratu Kemuning<br/>
-              Blok BL No. 1, RT.8/RW.14 Daerah Khusus Ibukota Jakarta,<br/>
-              Jakarta Barat (11510)
+              <AnimatedText
+                value="Komplek Green Ville, Jalan Ratu Kemuning"
+              />
+              <br/>
+              <AnimatedText
+                value="Blok BL No. 1, RT.8/RW.14 Daerah Khusus Ibukota Jakarta,"
+              />
+              <br/>
+              <AnimatedText
+                value="Jakarta Barat (11510)"
+              />
             </p>
           </div>
 
