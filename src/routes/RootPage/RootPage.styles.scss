@@ -26,7 +26,7 @@
 
 .hero__description {
   width: 100%;
-  padding: 0 24px;
+  padding: 0 toRem(24px);
   font-size: toRem(16px);
   text-align: center;
   right: 50%;
@@ -48,7 +48,7 @@
 .hero__information {
   top: toRem(450px);
   width: 100%;
-  padding: 0 24px;
+  padding: 0 toRem(24px);
   left: 50%;
   transform: translateX(-50%);
 
@@ -67,7 +67,7 @@
   text-align: center;
 
   @include screen(lg) {
-    max-width: 330px;
+    max-width: 3toRem(30px);
   }
 }
 
@@ -258,7 +258,7 @@
 .contact__wrapper {
   width: 100%;
   display: flex;
-  gap: 30px;
+  gap: toRem(30px);
   justify-content: space-between;
   flex-direction: column;
 

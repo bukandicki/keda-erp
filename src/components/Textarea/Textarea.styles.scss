@@ -7,15 +7,15 @@
 .textarea__label {
   display: block;
   font-weight: 500;
-  margin-bottom: 4px;
+  margin-bottom: toRem(4px);
 }
 
 .textarea__field {
   width: 100%;
-  font-size: 16px;
-  border-radius: 8px;
-  padding: 8px 16px;
+  font-size: 1toRem(6px);
+  border-radius: toRem(8px);
+  padding: toRem(8px) 1toRem(6px);
   resize: vertical;
-  border: solid 1px clr(smoke);
+  border: solid toRem(1px) clr(smoke);
   outline: none;
 }

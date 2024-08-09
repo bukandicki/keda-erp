@@ -1,9 +1,9 @@
 @import "../../styles/functions.scss";
+@import "../../styles/mixins.scss";
 
 .header__wrapper,
 .nav__lists {
   display: flex;
-  align-items: center;
 }
 
 .header {
@@ -16,14 +16,63 @@
 
 .header__wrapper {
   justify-content: space-between;
-  padding: 0 24px;
-  height: 64px;
+  padding: toRem(24px);
+  height: toRem(64px);
+
+  @include screen(sm) {
+    padding: 0 toRem(24px);
+  }
+}
+
+.nav__close {
+  position: absolute;
+  right: 20px;
+  display: block;
+
+  @include screen(sm) {
+    display: none;
+  }
 }
 
 .nav__lists {
-  gap: 24px;
-  padding: 0;
+  gap: toRem(24px);
+  padding: 24px 0;
   list-style: none;
+  flex-direction: column;
+
+  @include screen(sm) {
+    padding: 0;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.header__hamburger {
+  display: block;
+
+  @include screen(sm) {
+    display: none;
+  }
+}
+
+.header__nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100vh;
+  padding: 24px;
+  background-color: clr(light);
+
+  @include screen(sm) {
+    left: unset;
+    top: unset;
+    background-color: unset;
+    position: unset;
+    height: unset;
+    padding: unset;
+    width: unset;
+  }
 }
 
 .nav__item,
@@ -47,20 +96,36 @@
   }
 }
 
+.header__logo-link {
+  display: none;
+
+  @include screen(sm) {
+    display: block;
+  }
+}
+
+.header__logo {
+  align-self: center;
+}
+
 .nav__item-login {
   display: block;
-  font-size: 12px;
-  padding: 6px 0;
-  width: 110px;
+  font-size: toRem(12px);
+  padding: toRem(6px) 0;
+  width: 100%;
   text-align: center;
-  border-radius: 8px;
+  border-radius: toRem(8px);
   color: clr(primary);
-  border: solid 1px clr(primary);
+  border: solid toRem(1px) clr(primary);
 
   &:hover, &--active {
     color: clr(light);
     background-color: clr(dark);
     border-color: clr(dark);
+  }
+
+  @include screen(sm) {
+    width: toRem(110px);
   }
 }
 

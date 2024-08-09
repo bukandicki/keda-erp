@@ -1,18 +1,38 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { useLenis } from "lenis/react";
-
-import "./Header.styles.scss"
-import { memo } from "react";
+import { memo, useRef } from "react";
 import { MENUS } from "../../lib/constants/menu";
 
+import gsap from "gsap";
+
+import HamburgerIcon from "../../assets/svgs/hamburger.svg"
+import CloseIcon from "../../assets/svgs/close.svg"
+
+import "./Header.styles.scss"
+
 function HeaderComponent() {
+  const navRef = useRef<HTMLElement>(null)
+
   const lenis = useLenis()
   const location = useLocation()
+
+  const handleMobileMenuClicked = (state: "open" | "closed") => {
+    gsap.to(navRef.current, {
+      left: state === "open" ? 0 : "-100%"
+    })
+  }
 
   return (
     <header className="header">
       <div className="header__wrapper">
         <div className="header__logo">
+          <button
+            className="header__hamburger"
+            onClick={() => handleMobileMenuClicked("open")}
+          >
+            <HamburgerIcon />
+          </button>
+
           <NavLink
             to="/"
             onClick={() => lenis?.scrollTo(0)}
@@ -26,10 +46,17 @@ function HeaderComponent() {
           </NavLink>
         </div>
 
-        <nav className="header__nav">
+        <nav className="header__nav" ref={navRef}>
+          <button
+            className="nav__close"
+            onClick={() => handleMobileMenuClicked("closed")}
+          >
+            <CloseIcon />
+          </button>
+
           <ul className="nav__lists">
-            {MENUS.map(menu => (
-              <li key={menu.to}>
+            {MENUS.map((menu, idx) => (
+              <li key={idx}>
                 <NavLink
                   to={menu.hash ? menu.to + menu.hash : menu.to}
                   onClick={() => lenis?.scrollTo(menu.hash)}

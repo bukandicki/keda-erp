@@ -1,4 +1,5 @@
 @import "../../styles/functions.scss";
+@import "../../styles/mixins.scss";
 
 .trial {
   display: flex;
@@ -10,11 +11,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+
+  @include screen(lg) {
+    flex-direction: row;
+  }
 }
 
 .trial__sidebar {
-  padding: 64px 30px 0 30px;
-  border-right: solid 1px clr(smoke);
+  padding: toRem(64px) toRem(30px) 0 toRem(30px);
+  border-right: solid toRem(1px) clr(smoke);
   height: 100vh;
   width: 20%;
 }
@@ -24,17 +30,21 @@
   padding: 0;
 
   button {
-    font-size: 16px;
+    font-size: toRem(16px);
   }
 
   li {
-    margin-bottom: 14px;
+    margin-bottom: toRem(14px);
   }
 }
 
 .trial__main {
-  padding: 64px 80px 0 80px;
+  padding: toRem(24px);
   width: 80%;
+
+  @include screen(lg) {
+    padding: toRem(64px) toRem(80px) 0 toRem(80px);
+  }
 }
 
 .profit__prediction {
@@ -42,34 +52,44 @@
 }
 
 .analytic__summary {
-  margin-top: 40px;
+  margin-top: toRem(40px);
   display: flex;
-  gap: 40px;
+  gap: toRem(40px);
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
+
+  @include screen(lg) {
+    flex-direction: row;
+  }
 }
 
 .analytic__box {
   flex: 1;
-  border: solid 1px clr(smoke);
-  padding: 12px;
-  border-radius: 16px;
+  width: 100%;
+  border: solid toRem(1px) clr(smoke);
+  padding: toRem(12px);
+  border-radius: toRem(16px);
   display: flex;
-  gap: 24px;
+  gap: toRem(24px);
+
+  @include screen(lg) {
+    width: unset;
+  }
 }
 
 .analytic__icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 8px;
+  width: toRem(64px);
+  height: toRem(64px);
+  border-radius: toRem(8px);
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: clr(primary);
 
   svg {
-    width: 40px;
-    height: 40px;
+    width: toRem(40px);
+    height: toRem(40px);
   }
 }
 
@@ -79,18 +99,24 @@
 
 .analytic__name {
   margin: 0;
-  font-size: 18px;
-  margin-bottom: 4px;
+  font-size: toRem(18px);
+  margin-bottom: toRem(4px);
 }
 
 .analytic__counter {
-  font-size: 14px;
+  font-size: toRem(14px);
 }
 
 .analytic__charts {
-  margin-top: 100px;
+  margin-top: toRem(40px);
   display: flex;
-  gap: 30px;
+  gap: toRem(30px);
+  flex-direction: column;
+
+  @include screen(lg) {
+    margin-top: toRem(100px);
+    flex-direction: row;
+  }
 }
 
 .chart__box {
@@ -99,20 +125,20 @@
 
 .inventory__table {
   border-collapse: collapse;
-  width: 800px;
+  width: toRem(800px);
 
   th,
   td {
-    padding: 8px;
+    padding: toRem(8px);
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: toRem(1px) solid #ddd;
   }
 }
 
 .inventory__form, .inventory__form-group {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: toRem(16px);
 }
 
 .inventory__form-group {

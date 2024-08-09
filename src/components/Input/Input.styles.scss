@@ -7,15 +7,15 @@
 .input__label {
   display: block;
   font-weight: 500;
-  margin-bottom: 4px;
+  margin-bottom: toRem(4px);
 }
 
 .input__field {
   width: 100%;
-  font-size: 16px;
-  border-radius: 8px;
-  height: 44px;
-  padding: 0 16px;
-  border: solid 1px clr(smoke);
+  font-size: toRem(16px);
+  border-radius: toRem(8px);
+  height: toRem(44px);
+  padding: 0 toRem(16px);
+  border: solid toRem(1px) clr(smoke);
   outline: none;
 }
