@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { SERVICES_LIST } from "../../lib/constants/service"
 import { TIER_LISTS } from "../../lib/constants/tier"
 
@@ -14,6 +14,8 @@ import "./RootPage.styles.scss"
 import Textarea from "../../components/Textarea"
 
 export default function RootPage() {
+  const navigate = useNavigate();
+
   return (
     <main className="erp">
       <section className="erp__hero">
@@ -114,7 +116,12 @@ export default function RootPage() {
 
               <div className="tier__cta">
                 <hr />
-                <Button outlined={!tier.popular}>Get started</Button>
+                <Button
+                  outlined={!tier.popular}
+                  onClick={() => navigate(`/trial/${tier.slug}`)}
+                >
+                  Get started
+                </Button>
               </div>
             </div>
           ))}

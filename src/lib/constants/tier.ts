@@ -1,6 +1,7 @@
-export const TIER_LISTS: Array<{
+export type TIER_TYPE = {
   name: string;
   description: string;
+  slug: string;
   price: number;
   popular: boolean;
   benefits: {
@@ -12,10 +13,13 @@ export const TIER_LISTS: Array<{
     can_export_data_to_excel: boolean;
     can_use_ai_prediction: boolean;
   }
-}> = [
+}
+
+export const TIER_LISTS: Array<TIER_TYPE> = [
   {
     name: "Basic",
     description: "Ideal for small businesses or startups that need essential tools to manage incoming and outgoing items, as well as track profits.",
+    slug: "basic",
     price: 2300,
     popular: false,
     benefits: {
@@ -31,6 +35,7 @@ export const TIER_LISTS: Array<{
   {
     name: "Business",
     description: "Perfect for growing businesses that require more advanced features like sales analysis and 24/7 support to optimize their operations.",
+    slug: "business",
     price: 5800,
     popular: true,
     benefits: {
@@ -46,6 +51,7 @@ export const TIER_LISTS: Array<{
   {
     name: "Entrepreneur",
     description: "Designed for established businesses or entrepreneurs seeking comprehensive tools including advanced sales analysis, data export, AI-driven predictions, and round-the-clock support.",
+    slug: "entrepreneur",
     price: 8000,
     popular: false,
     benefits: {
