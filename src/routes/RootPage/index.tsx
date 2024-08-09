@@ -5,10 +5,13 @@ import { TIER_LISTS } from "../../lib/constants/tier"
 import TopWave from "../../assets/svgs/top-wave.svg"
 import BottomWave from "../../assets/svgs/bottom-wave.svg"
 import CheckIcon from "../../assets/svgs/check.svg"
+import ContactImage from "../../assets/images/contact.jpg"
 import AnalyticsIllustration from "../../assets/svgs/analytics.svg"
 import Button from "../../components/Button"
+import Input from "../../components/Input"
 
 import "./RootPage.styles.scss"
+import Textarea from "../../components/Textarea"
 
 export default function RootPage() {
   return (
@@ -119,7 +122,35 @@ export default function RootPage() {
       </section>
 
       <section className="erp__contact" id="contact">
+        <h2 className="contact__title">Contact Us</h2>
 
+        <div className="contact__wrapper">
+          <div className="contact__detail">
+            <img src={ContactImage} className="contact__image" />
+            <p className="contact__address">
+              Komplek Green Ville, Jalan Ratu Kemuning<br/>
+              Blok BL No. 1, RT.8/RW.14 Daerah Khusus Ibukota Jakarta,<br/>
+              Jakarta Barat (11510)
+            </p>
+          </div>
+
+          <form className="contact__form">
+            <div className="contact__field-group">
+              <Input type="text" label="First name" />
+              <Input type="text" label="Last name" />
+            </div>
+
+            <div className="contact__field-group">
+              <Input type="email" label="Email" />
+            </div>
+
+            <div className="contact__field-group">
+              <Textarea label="Messages" />
+            </div>
+
+            <Button type="button">Send</Button>
+          </form>
+        </div>
       </section>
     </main>
   )

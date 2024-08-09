@@ -40,7 +40,8 @@
 // ABOUT SECTION
 
 .erp__about,
-.erp__pricing {
+.erp__pricing,
+.erp__contact {
   padding: 80px;
   position: relative;
 }
@@ -166,3 +167,33 @@
 .tier__cta {
   margin-top: auto;
 }
+
+// CONTACT SECTION
+
+.contact__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__image {
+  width: 400px;
+}
+
+.contact__address {
+  font-size: 14px;
+  font-weight: 500;
+  color: #888e92;
+}
+
+.contact__form {
+  width: 600px;
+}
+
+.contact__field-group {
+  display: flex;
+  margin-bottom: 30px;
+  gap: 30px;
+  width: 100%;
+}
+
