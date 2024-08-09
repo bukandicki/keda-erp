@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider as Provider } from 'react-router-dom'
+import { lazy, Suspense } from 'react';
 
 import RootLayout from '../RootLayout';
 
-import RootPage from '../../routes/RootPage';
-import LoginPage from '../../routes/LoginPage';
-import TrialPage from '../../routes/TrialPage';
+const RootPage = lazy(() => import('../../routes/RootPage'))
+const LoginPage = lazy(() => import('../../routes/LoginPage'))
+const TrialPage = lazy(() => import('../../routes/TrialPage'))
 
 const router = createBrowserRouter([
   {
@@ -13,15 +14,27 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <RootPage />,
+        element: <>
+          <Suspense>
+            <RootPage />,
+          </Suspense>
+        </>
       },
       {
         path: "/login",
-        element: <LoginPage />,
+        element: <>
+          <Suspense>
+            <LoginPage />,
+          </Suspense>
+        </>
       },
       {
         path: "/trial/:tier",
-        element: <TrialPage />,
+        element: <>
+          <Suspense>
+            <TrialPage />,
+          </Suspense>
+        </>
       }
     ]
   },

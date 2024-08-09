@@ -123,7 +123,7 @@ export default function AnalyticSection({ tier }: { tier: TIER_TYPE }) {
               width="100%"
               options={{
                 ...options,
-                colors: ["#cc3cfb"],
+                colors: ["#cc3cfb", "#1264fb"],
                 title: {
                   text: 'Profits',
                 },

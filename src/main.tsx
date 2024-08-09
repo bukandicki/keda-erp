@@ -1,11 +1,10 @@
 
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { lazy } from 'react';
 
 import ReactLenis from 'lenis/react'
 
-const RouterProvider = lazy(() => import("./components/RouterProvider"))
+import RouterProvider from "./components/RouterProvider"
 
 import "./index.styles.scss"
 
