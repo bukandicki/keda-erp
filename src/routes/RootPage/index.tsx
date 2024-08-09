@@ -145,7 +145,7 @@ export default function RootPage() {
             </div>
 
             <div className="contact__field-group">
-              <Textarea label="Messages" />
+              <Textarea rows={5} label="Messages" />
             </div>
 
             <Button type="button">Send</Button>

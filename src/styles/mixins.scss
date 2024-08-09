@@ -1,0 +1,15 @@
+@use "sass:map";
+
+@mixin screen($size, $max: false) {
+  @if ($max) {
+    @media (max-width: #{map.get($screens, $size)}px) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: #{map.get($screens, $size)}px) {
+      @content;
+    }
+  }
+}

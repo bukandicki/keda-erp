@@ -1,3 +1,5 @@
+@import "../../styles/functions.scss";
+
 .textarea {
   width: 100%;
 }
@@ -12,9 +14,8 @@
   width: 100%;
   font-size: 16px;
   border-radius: 8px;
-  height: 44px;
   padding: 8px 16px;
   resize: vertical;
-  border: solid 1px #e4e5e6;
+  border: solid 1px clr(smoke);
   outline: none;
 }

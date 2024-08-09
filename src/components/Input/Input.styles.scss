@@ -1,3 +1,5 @@
+@import "../../styles/functions.scss";
+
 .input {
   width: 100%;
 }
@@ -14,6 +16,6 @@
   border-radius: 8px;
   height: 44px;
   padding: 0 16px;
-  border: solid 1px #e4e5e6;
+  border: solid 1px clr(smoke);
   outline: none;
 }

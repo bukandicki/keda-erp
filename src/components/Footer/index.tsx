@@ -1,5 +1,9 @@
-export default function FooterComponent() {
+import { memo } from "react"
+
+function FooterComponent() {
   return (
-    <footer>FooterComponent</footer>
+    <footer></footer>
   )
 }
+
+export default memo(FooterComponent)

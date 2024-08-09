@@ -1,0 +1,17 @@
+@function toRem($value) {
+  @return ($value / $base-font-size) * 1rem;
+}
+
+@function toRGB($value) {
+  @return red($value), green($value), blue($value);
+}
+
+@function clr($value, $alpha: false) {
+  @if $alpha {
+    @return  rgba(var(--color-#{unquote($value)}), $alpha);
+  }
+
+  @else {
+    @return rgb(var(--color-#{unquote($value)}));
+  }
+}

@@ -1,3 +1,5 @@
+@import "../../styles/functions.scss";
+
 .header__wrapper,
 .nav__lists {
   display: flex;
@@ -34,14 +36,14 @@
 .header__logo-link,
 .nav__item-login {
   font-weight: 700;
-  color: #000000;
+  color: clr(dark);
   text-decoration: none;
 }
 
 .nav__item,
 .header__logo-link {
   &:hover, &--active {
-    color: #1264fb;
+    color: clr(primary);
   }
 }
 
@@ -52,13 +54,13 @@
   width: 110px;
   text-align: center;
   border-radius: 8px;
-  color: #1264fb;
-  border: solid 1px #1264fb;
+  color: clr(primary);
+  border: solid 1px clr(primary);
 
   &:hover, &--active {
-    color: #ffffff;
-    background-color: #000000;
-    border-color: #000000;
+    color: clr(light);
+    background-color: clr(dark);
+    border-color: clr(dark);
   }
 }
 
