@@ -4,6 +4,7 @@ import RootLayout from '../RootLayout';
 
 import RootPage from '../../routes/RootPage';
 import LoginPage from '../../routes/LoginPage';
+import TrialPage from '../../routes/TrialPage';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <LoginPage />,
+      },
+      {
+        path: "/trial/:tier",
+        element: <TrialPage />,
       }
     ]
   },
